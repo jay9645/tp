@@ -238,6 +238,9 @@ Each client attribute such as name and address have been assigned identifiers so
 the entire attribute when using ClientBook. For example, name has been abbreviated to `n`. Listed below are all the identifiers
 which correspond to client attributes as well as restrictions that have to be followed when they are used as part of a command.
 
+Please note that duplicate clients (having the same information for all attributes) is not allowed. Adding a client that already
+exists and editing a client to have the same information as an existing client is invalid.
+
 <table>
   <tr>
     <td> <b>Attribute</b> </td>
@@ -247,7 +250,9 @@ which correspond to client attributes as well as restrictions that have to be fo
   <tr>
     <td> Name </td>
     <td> <code>n</code> </td>
-    <td> Must only contain <a href="#glossary">alphanumeric</a> characters and spaces </td>
+    <td> 
+        <ul><li>Must only contain <a href="#glossary">alphanumeric</a> characters and spaces</li></ul>
+    </td>
   </tr>
   <tr>
     <td> Phone number </td>
@@ -370,7 +375,6 @@ A client can have any number of tags and insurance policies (including 0).
 * It is optional to include the `POLICY_URL` for the specified `POLICY_ID`.
 * To include the URL, remember to use `>` to indicate that a particular insurance policy is linked to a URL, as shown in the second example below.
 * Meetings of a client cannot be added with this command.
-* Adding duplicate clients (having the same information for all attributes) is not allowed.
 
 **Examples**:
 * Example of a client with insurance policy but no URL associated with insurance policy
