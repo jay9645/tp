@@ -1,5 +1,8 @@
 package seedu.address.model.person;
 
+import javax.mail.internet.AddressException;
+import javax.mail.internet.InternetAddress;
+
 import static java.util.Objects.requireNonNull;
 import static seedu.address.commons.util.AppUtil.checkArgument;
 
@@ -44,6 +47,11 @@ public class Email {
      * Returns if a given string is a valid email.
      */
     public static boolean isValidEmail(String test) {
+        try {
+            new InternetAddress(test, true);
+        } catch (AddressException e) {
+            return false;
+        }
         return test.matches(VALIDATION_REGEX);
     }
 
