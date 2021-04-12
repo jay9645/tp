@@ -118,30 +118,34 @@ public class ParserUtil {
      * Leading and trailing whitespaces will be trimmed.
      * @throws ParseException if the specified index is invalid (not non-zero unsigned integer).
      */
-    public static List<Attribute> parseAttributes(List<String> attributes) throws ParseException {
-        List<Attribute> parsedAttributesList = new ArrayList<>();
+    public static Set<Attribute> parseAttributes(List<String> attributes) throws ParseException {
+        final Set<Attribute> parsedAttributesSet = new HashSet<>();
+        boolean isAttributeUnique = true;
         for (String attribute : attributes) {
             switch (attribute) {
             case "-i":
-                parsedAttributesList.add(Attribute.POLICY_ID);
+                isAttributeUnique = parsedAttributesSet.add(Attribute.POLICY_ID);
                 break;
             case "-p":
-                parsedAttributesList.add(Attribute.PHONE);
+                isAttributeUnique = parsedAttributesSet.add(Attribute.PHONE);
                 break;
             case "-e":
-                parsedAttributesList.add(Attribute.EMAIL);
+                isAttributeUnique = parsedAttributesSet.add(Attribute.EMAIL);
                 break;
             case "-a":
-                parsedAttributesList.add(Attribute.ADDRESS);
+                isAttributeUnique = parsedAttributesSet.add(Attribute.ADDRESS);
                 break;
             case "-m":
-                parsedAttributesList.add(Attribute.MEETING);
+                isAttributeUnique = parsedAttributesSet.add(Attribute.MEETING);
                 break;
             default:
                 throw new ParseException(Attribute.MESSAGE_ATTRIBUTE_CONSTRAINTS);
             }
+            if (!isAttributeUnique) {
+                throw new ParseException(Attribute.MESSAGE_ATTRIBUTE_UNIQUE_CONSTRAINTS);
+            }
         }
-        return parsedAttributesList;
+        return parsedAttributesSet;
     }
 
     /**
