@@ -413,11 +413,12 @@ the existing client information.
     * If you specify `edit n/Alex n/Bob...`, only `n/Bob` will be taken.
 * For fields that are allowed to be empty, specifying the identifier and leaving it empty will clear the existing information.
     * `edit 1 i/` will clear the existing policies.
-* While editing the insurance policies of a client, user can choose to replace, modify, remove or insert policy ids to 
+* While editing the insurance policies of a client, user can choose to modify, remove or insert policy ids to 
 a client, by typing `-MODE` to specify an editing mode after a policy number. 
-    * `-MODE` must be -insert, -modify or -remove.
+    * `-MODE` can be -insert, -modify or -remove.
     * If user chooses to modify an existing policy, the user can specify the old and new policies, separated by `;`. An example is shown below.
     * For each edit command, only 1 editing mode can be specified.
+    * If no mode is specified, the edit command will replace all existing policies with the policies specified in the command.
 
 <div markdown="block" class="alert alert-info">
 :exclamation: **Caution**: Existing values will be **replaced** with the input values.
@@ -433,7 +434,7 @@ a client, by typing `-MODE` to specify an editing mode after a policy number.
     * `edit 2 n/Betsy Crower`
     <br><br> 
 *  Modify the policy id of the 1st client from `Pol#12345` to `Pol#54321`.
-    * `edit 1 i/Pol#12345;Pol#54321`
+    * `edit 1 i/Pol#12345;Pol#54321 -modify`
 
 [Return to Table of Contents](#table-of-contents)
 <br><br>
