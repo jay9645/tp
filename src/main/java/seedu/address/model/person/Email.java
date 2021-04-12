@@ -1,10 +1,10 @@
 package seedu.address.model.person;
 
-import javax.mail.internet.AddressException;
-import javax.mail.internet.InternetAddress;
-
 import static java.util.Objects.requireNonNull;
 import static seedu.address.commons.util.AppUtil.checkArgument;
+
+import javax.mail.internet.AddressException;
+import javax.mail.internet.InternetAddress;
 
 /**
  * Represents a Person's email in the address book.

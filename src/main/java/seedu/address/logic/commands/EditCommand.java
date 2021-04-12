@@ -47,7 +47,8 @@ public class EditCommand extends Command implements BatchOperation {
             + "[" + PREFIX_ADDRESS + "ADDRESS] "
             + "[" + PREFIX_INSURANCE_POLICY + " POLICY_ID] [-FLAG] "
             + "[" + PREFIX_TAG + "TAG]... \n"
-            + "FLAG can be modify, insert or remove or editing policy ids. If no flag is specified, the default behaviour is replace.\n"
+            + "FLAG can be modify, insert or remove or editing policy ids. If no flag is specified, the default "
+            + "behaviour is replace.\n"
             + "Example: " + COMMAND_WORD + " 1 "
             + PREFIX_PHONE + "91234567 "
             + PREFIX_EMAIL + "johndoe@example.com";
