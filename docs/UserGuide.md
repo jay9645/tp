@@ -198,6 +198,7 @@ This command deletes the contact of the third client displayed in the contact li
 [Return to Table of Contents](#table-of-contents)
 
 <div style="page-break-before:always"></div>
+
 ### Conclusion
 Now that you have tried out the basic commands available in ClientBook, go ahead and try out more advanced features that you can find
 in the [Feature-Description](#feature-description) section below. Whenever you like, you can use the command `batch delete 1,2,3,4,5,6,7`
