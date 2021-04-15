@@ -23,7 +23,7 @@ a section [here](#how-to-use-this-user-guide) to guide you through this user gui
 ## Why ClientBook?
 
 ClientBook is designed for insurance agents who are always on the go. We understand the pain and inconvenience of having to navigate around
-your screen without a mouse while you are out and about. We are also aware that you might have to remember various details about your many clients,
+your screen without a mouse while you are out meeting clients. We are also aware that you might have to remember various details about your many clients,
 and that is difficult.
 
 Thus, ClientBook is born!
