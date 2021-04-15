@@ -113,7 +113,7 @@ Download the latest release of the application, `clientbook.jar`, [here](https:/
 
 <p><b>Step 3.</b></p>
 
-Copy the downloaded file to a folder (we will be referring to this folder as the **_home folder_**) where you want to store the ClientBook application and your client information.
+Copy the downloaded file to the folder (we will be referring to this folder as the **_home folder_**) where you want to store the ClientBook application and your client information.
 
 <p><b>Step 4.</b></p>
 
